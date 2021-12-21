@@ -1,0 +1,17 @@
+#法规详情接口
+-
+ caseName: case2_1----《交通法》目录章节数
+ payloads:  {"gid":"A141827"}
+ expectResult: 1
+-
+ caseName: case2_2----《宪法》目录章节数
+ payloads: {"gid":"A193711"}
+ expectResult: 13
+-
+ caseName: case2_3----《婚姻法》目录章节数
+ payloads:  {"gid":"A193758"}
+ expectResult: 6
+-
+ caseName: case2_4----《关于交易法通知》目录章节数
+ payloads:  {"gid":"A309950"}
+ expectResult: 0

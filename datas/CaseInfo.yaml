@@ -1,0 +1,26 @@
+#案例详情接口
+-
+ caseName: case1_1
+ payloads:  {"gid":"C668510"}
+ expectResult: ["■案情","■裁判"]
+-
+ caseName: case1_2
+ payloads: {"gid":"C1310080"}
+ expectResult: []
+-
+ caseName: case1_3
+ payloads:  {"gid":"C1356210"}
+ expectResult: ["一、基本情况","二、诉辩主张","三、人民法院认定事实和证据","四、判案理由","五、定案结论"]
+-
+ caseName: case1_4
+ payloads:  {"gid":"C1356213"}
+ expectResult: ["【办案手记】","【案情概述】"]
+-
+ caseName: case1_5
+ payloads:  {"gid":"C1336231"}
+ expectResult: ["一、基本案情及审理结果"]
+-
+ caseName: case1_6
+ payloads:  {"gid":"C1268158"}
+ expectResult: []
+

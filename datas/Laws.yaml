@@ -1,0 +1,37 @@
+#法规查询结果接口
+-
+ caseName: case3_1----搜索关键词“通知”，分页大小设为10，当前页设为1
+ payloads:  {"pageNO": 1,"pageSize":10,"keyword": "通知"}
+ expectResult: 140290
+ expectResult2: 10
+-
+ caseName: case3_2----搜索关键词“详情”，分页大小设为10，当前页设为1
+ payloads:  {"pageNO": 1,"pageSize":10,"keyword": "详情"}
+ expectResult: 1
+ expectResult2: 1
+-
+ caseName: case3_3----搜索关键词“宪法”，分页大小设为10，当前页设为1
+ payloads:  {"pageNO": 1,"pageSize":10,"keyword": "宪法"}
+ expectResult: 53
+ expectResult2: 10
+-
+ caseName: case3_4----搜索关键词“宪法”，分页大小设为20，当前页设为1
+ payloads:  {"pageNO": 1,"pageSize":20,"keyword": "宪法"}
+ expectResult: 53
+ expectResult2: 20
+
+-
+ caseName: case3_5----搜索关键词“宪法”，分页大小设为10，当前页设为6
+ payloads:  {"pageNO": 6,"pageSize":10,"keyword": "宪法"}
+ expectResult: 53
+ expectResult2: 3
+-
+ caseName: case3_6----搜索关键词“宪法”，分页大小设为10，当前页设为7
+ payloads:  {"pageNO": 7,"pageSize":10,"keyword": "宪法"}
+ expectResult: 53
+ expectResult2: 0
+-
+ caseName: case3_7----搜索关键词“宪法”，分页大小设为20，当前页设为3
+ payloads:  {"pageNO": 3,"pageSize":20,"keyword": "宪法"}
+ expectResult: 53
+ expectResult2: 13

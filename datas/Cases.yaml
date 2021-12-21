@@ -1,0 +1,37 @@
+#案例查询结果接口
+-
+ caseName: case4_1----搜索关键词“偷窃”
+ payloads:  {
+              "pageNO": 1,
+              "pageSize": 10,
+              "anJianYaoZhi": "偷窃",
+              "anYou": "民事案由",
+              "anJianLeiBie": "民事",
+              "shenLiChengXu": "一审"
+            }
+ expectResult: 23
+ expectResult2: 10
+-
+ caseName: case4_2----搜索关键词“离婚”
+ payloads:  {
+              "pageNO": 1,
+              "pageSize": 10,
+              "anJianYaoZhi": "离婚",
+              "anYou": "民事案由",
+              "anJianLeiBie": "民事",
+              "shenLiChengXu": "一审"
+            }
+ expectResult: 4358
+ expectResult2: 10
+-
+ caseName: case4_3----搜索关键词“程序员”
+ payloads:  {
+              "pageNO": 1,
+              "pageSize": 10,
+              "anJianYaoZhi": "离婚",
+              "anYou": "民事案由",
+              "anJianLeiBie": "民事",
+              "shenLiChengXu": "全部"
+            }
+ expectResult: 1
+ expectResult2: 1

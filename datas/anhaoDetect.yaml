@@ -1,0 +1,122 @@
+#案例查询结果接口
+-
+ caseName: case5_1----中英文标点使用混乱
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "(2021)最高法民初2071号"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1401,
+                    "keyword": "(",
+                    "suggestion": "（",
+                    "tip": ""
+                }
+
+-
+ caseName: case5_2----账号与法院代字不匹配
+ payloads:  {
+                "judgeId":5,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "（2021）最高法民初2071号"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1003,
+                    "keyword": "最高法",
+                    "suggestion": "闽02",
+                    "tip": null
+                }
+-
+ caseName: case5_3----非当前年份
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "（2020）最高法民初2071号"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1002,
+                    "keyword": "2020",
+                    "suggestion": "2021",
+                    "tip": null
+                }
+-
+ caseName: case5_4----类型代字错误
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "（2021）最高法民众2071号"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1005,
+                    "keyword": "民众",
+                    "suggestion": "",
+                    "tip": null
+                }
+-
+ caseName: case5_5----案号格式正确
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "（2021）最高法民初2071号"
+                    }
+                ]
+            }
+ expectResult: []
+-
+ caseName: case5_6----顺序错误
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "（2021）民初最高法2071号"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1001,
+                    "keyword": "（2021）民初最高法2071号",
+                    "suggestion": "",
+                    "tip": "正确的案号格式为：（[收案年度]）[法院代字][类型代字][案件编号]号"
+                }
+-
+ caseName: case5_7----缺少法院代字
+ payloads:  {
+                "judgeId":3,
+                "paragraphs": [
+                    {
+                        "index":2,
+                        "content": "（2021）民初2071号"
+                    }
+                ]
+            }
+ expectResult: {
+                    "level": 1,
+                    "type": 1001,
+                    "keyword": "（2021）民初最高法2071号",
+                    "suggestion": "",
+                    "tip": "正确的案号格式为：（[收案年度]）[法院代字][类型代字][案件编号]号"
+                }
